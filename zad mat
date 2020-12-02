@@ -1,0 +1,27 @@
+#include <fstream>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+int main() {   
+    string linia;
+    fstream plik;
+
+    plik.open("plik.txt", ios::in);
+    if(plik.good() == true)
+    {
+        while(!plik.eof())
+        {
+            getline(plik, linia);
+            cout << hex << 255;
+            cout << linia << endl; 
+        }
+        plik.close();
+    }
+	
+
+    system("PAUSE");
+    return(0);		 
+}
